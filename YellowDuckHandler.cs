@@ -54,6 +54,14 @@ namespace MoreAppearancePreset
                 // 设置随机preset按钮的文字
                 UpdateYellowDuckText(randomPresetButton, "随机预设");
                 
+                // 添加彩虹色循环效果组件
+                Debug.Log($"[YellowDuckHandler] 添加彩虹色循环效果组件...");
+                if (randomPresetButton.GetComponent<RainbowColorEffect>() == null)
+                {
+                    randomPresetButton.AddComponent<RainbowColorEffect>();
+                    Debug.Log($"[YellowDuckHandler] ✓ 已添加彩虹色循环效果组件");
+                }
+                
                 // 确保随机按钮在最前面
                 randomPresetButton.transform.SetSiblingIndex(0);
                 
