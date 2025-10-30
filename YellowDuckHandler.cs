@@ -100,6 +100,13 @@ namespace MoreAppearancePreset
                     Debug.Log($"[YellowDuckHandler] 开始修改文字为: 我是{presetName}...");
                     UpdateYellowDuckText(yellowDuckCopy, presetName);
 
+                    // 设置Image组件的颜色为预设的mainColor（排除"小黄鸭"）
+                    if (presetName != "小黄鸭")
+                    {
+                        Debug.Log($"[YellowDuckHandler] 开始设置Image颜色为预设mainColor...");
+                        SetImageColorFromPreset(yellowDuckCopy, presetData);
+                    }
+
                     index++;
                     Debug.Log($"[YellowDuckHandler] ✓ 完成复制预设 [{index}/{presetCount}]: {presetName}");
                 }
@@ -111,6 +118,102 @@ namespace MoreAppearancePreset
                 Debug.LogError($"[MoreAppearancePreset] 复制YellowDuck时发生错误: {ex.Message}");
                 Debug.LogError($"[MoreAppearancePreset] 堆栈跟踪: {ex.StackTrace}");
             }
+        }
+
+        /// <summary>
+        /// 从预设数据中解析mainColor并设置Image组件的颜色
+        /// </summary>
+        private static void SetImageColorFromPreset(GameObject buttonObject, string presetDataJson)
+        {
+            if (buttonObject == null || string.IsNullOrEmpty(presetDataJson))
+            {
+                return;
+            }
+
+            try
+            {
+                // 从JSON中解析mainColor
+                Color? mainColor = ParseMainColorFromPreset(presetDataJson);
+                
+                if (mainColor.HasValue)
+                {
+                    // 获取Image组件
+                    Image? image = buttonObject.GetComponent<Image>();
+                    
+                    if (image != null)
+                    {
+                        image.color = mainColor.Value;
+                        Debug.Log($"[YellowDuckHandler] ✓ 已设置Image颜色: R={mainColor.Value.r:F3}, G={mainColor.Value.g:F3}, B={mainColor.Value.b:F3}, A={mainColor.Value.a:F3}");
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[YellowDuckHandler] ✗ 按钮对象上未找到Image组件");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("[YellowDuckHandler] ✗ 无法从预设数据中解析mainColor");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[MoreAppearancePreset] 设置Image颜色时发生错误: {ex.Message}");
+                Debug.LogError($"[MoreAppearancePreset] 堆栈跟踪: {ex.StackTrace}");
+            }
+        }
+
+        /// <summary>
+        /// 从预设JSON字符串中解析mainColor
+        /// </summary>
+        private static Color? ParseMainColorFromPreset(string presetDataJson)
+        {
+            try
+            {
+                // 使用正则表达式提取mainColor的r, g, b, a值
+                // 查找模式: "mainColor":{"r":value,"g":value,"b":value,"a":value}
+                // 支持字段顺序不同，但通常顺序是r, g, b, a
+                string pattern = @"""mainColor"":\s*\{[^}]*""r"":\s*([0-9.]+)[^}]*""g"":\s*([0-9.]+)[^}]*""b"":\s*([0-9.]+)[^}]*""a"":\s*([0-9.]+)";
+                var match = System.Text.RegularExpressions.Regex.Match(presetDataJson, pattern);
+                
+                if (match.Success && match.Groups.Count >= 5)
+                {
+                    if (float.TryParse(match.Groups[1].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float r) &&
+                        float.TryParse(match.Groups[2].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float g) &&
+                        float.TryParse(match.Groups[3].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float b) &&
+                        float.TryParse(match.Groups[4].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float a))
+                    {
+                        return new Color(r, g, b, a);
+                    }
+                }
+                
+                // 如果上面的正则表达式失败，尝试更宽松的匹配（分别查找每个字段）
+                string rPattern = @"""mainColor"":\s*\{[^}]*""r"":\s*([0-9.]+)";
+                string gPattern = @"""mainColor"":\s*\{[^}]*""g"":\s*([0-9.]+)";
+                string bPattern = @"""mainColor"":\s*\{[^}]*""b"":\s*([0-9.]+)";
+                string aPattern = @"""mainColor"":\s*\{[^}]*""a"":\s*([0-9.]+)";
+                
+                var rMatch = System.Text.RegularExpressions.Regex.Match(presetDataJson, rPattern);
+                var gMatch = System.Text.RegularExpressions.Regex.Match(presetDataJson, gPattern);
+                var bMatch = System.Text.RegularExpressions.Regex.Match(presetDataJson, bPattern);
+                var aMatch = System.Text.RegularExpressions.Regex.Match(presetDataJson, aPattern);
+                
+                if (rMatch.Success && gMatch.Success && bMatch.Success && aMatch.Success)
+                {
+                    if (float.TryParse(rMatch.Groups[1].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float r2) &&
+                        float.TryParse(gMatch.Groups[1].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float g2) &&
+                        float.TryParse(bMatch.Groups[1].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float b2) &&
+                        float.TryParse(aMatch.Groups[1].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float a2))
+                    {
+                        return new Color(r2, g2, b2, a2);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[MoreAppearancePreset] 解析mainColor时发生错误: {ex.Message}");
+            }
+            
+            return null;
         }
 
         /// <summary>
