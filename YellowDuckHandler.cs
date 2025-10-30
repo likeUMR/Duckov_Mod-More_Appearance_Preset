@@ -159,8 +159,8 @@ namespace MoreAppearancePreset
                     float finalBrightness;
                     if (mainBrightness > referenceBrightness)
                     {
-                        // 如果mainColor更亮，使用平均值
-                        finalBrightness = (mainBrightness + referenceBrightness) / 2f;
+                        // 如果mainColor更亮，使用加权平均（mainColor权重2，参考色权重1）
+                        finalBrightness = (mainBrightness * 2f + referenceBrightness * 1f) / 3f;
                     }
                     else
                     {

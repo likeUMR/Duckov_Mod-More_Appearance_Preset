@@ -15,7 +15,7 @@ namespace MoreAppearancePreset
         private static readonly Color _referenceColor = new Color(0.91f, 0.57f, 0.08f, 1f);
         private float _saturation; // S值，从参考颜色提取
         private float _value; // V值，从参考颜色提取
-        private const float _speed = 0.5f; // 颜色变化速度（每秒循环次数）
+        private const float _speed = 0.14f; // 颜色变化速度（每秒循环次数）
 
         void Start()
         {
