@@ -52,7 +52,7 @@ namespace MoreAppearancePreset
                 ButtonHandler.RecreateButtonComponentForRandomPreset(randomPresetButton);
                 
                 // 设置随机preset按钮的文字
-                UpdateYellowDuckText(randomPresetButton, "随机预设");
+                UpdateYellowDuckText(randomPresetButton, "???");
                 
                 // 添加彩虹色循环效果组件
                 Debug.Log($"[YellowDuckHandler] 添加彩虹色循环效果组件...");
@@ -130,6 +130,9 @@ namespace MoreAppearancePreset
 
         /// <summary>
         /// 从预设数据中解析mainColor并设置Image组件的颜色
+        /// 使用mainColor的RGB值
+        /// 亮度：使用RGB平均值计算亮度，如果mainColor比参考色亮，则使用平均值；否则保持mainColor的亮度
+        /// 通过按比例缩放RGB值来调整亮度
         /// </summary>
         private static void SetImageColorFromPreset(GameObject buttonObject, string presetDataJson)
         {
@@ -145,13 +148,54 @@ namespace MoreAppearancePreset
                 
                 if (mainColor.HasValue)
                 {
+                    // 参考颜色的RGB值: (0.91, 0.57, 0.08)
+                    Color referenceColor = new Color(0.91f, 0.57f, 0.08f, 1f);
+                    
+                    // 使用RGB平均值计算亮度
+                    float mainBrightness = (mainColor.Value.r + mainColor.Value.g + mainColor.Value.b) / 3f;
+                    float referenceBrightness = (referenceColor.r + referenceColor.g + referenceColor.b) / 3f;
+                    
+                    // 计算最终亮度值（RGB平均值）
+                    float finalBrightness;
+                    if (mainBrightness > referenceBrightness)
+                    {
+                        // 如果mainColor更亮，使用平均值
+                        finalBrightness = (mainBrightness + referenceBrightness) / 2f;
+                    }
+                    else
+                    {
+                        // 如果mainColor更暗或相等，保持mainColor的亮度
+                        finalBrightness = mainBrightness;
+                    }
+                    
+                    // 计算缩放因子（如果需要调整）
+                    Color finalColor;
+                    if (Mathf.Abs(mainBrightness - finalBrightness) > 0.001f)
+                    {
+                        // 需要调整：按比例缩放RGB值
+                        float scaleFactor = finalBrightness / mainBrightness;
+                        finalColor = new Color(
+                            mainColor.Value.r * scaleFactor,
+                            mainColor.Value.g * scaleFactor,
+                            mainColor.Value.b * scaleFactor,
+                            mainColor.Value.a
+                        );
+                    }
+                    else
+                    {
+                        // 不需要调整，直接使用mainColor
+                        finalColor = mainColor.Value;
+                    }
+                    
                     // 获取Image组件
                     Image? image = buttonObject.GetComponent<Image>();
                     
                     if (image != null)
                     {
-                        image.color = mainColor.Value;
-                        Debug.Log($"[YellowDuckHandler] ✓ 已设置Image颜色: R={mainColor.Value.r:F3}, G={mainColor.Value.g:F3}, B={mainColor.Value.b:F3}, A={mainColor.Value.a:F3}");
+                        image.color = finalColor;
+                        Debug.Log($"[YellowDuckHandler] ✓ 已设置Image颜色");
+                        Debug.Log($"[YellowDuckHandler]   亮度(RGB平均值): main={mainBrightness:F3}, ref={referenceBrightness:F3}, final={finalBrightness:F3}");
+                        Debug.Log($"[YellowDuckHandler]   RGB: R={finalColor.r:F3}, G={finalColor.g:F3}, B={finalColor.b:F3}, A={finalColor.a:F3}");
                     }
                     else
                     {
