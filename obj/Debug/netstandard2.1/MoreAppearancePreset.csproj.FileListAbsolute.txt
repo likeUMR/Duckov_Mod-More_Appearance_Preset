@@ -153,3 +153,4 @@ D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard
 D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppe.FEC33F96.Up2Date
 D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppearancePreset.dll
 D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppearancePreset.pdb
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppearancePreset.sourcelink.json

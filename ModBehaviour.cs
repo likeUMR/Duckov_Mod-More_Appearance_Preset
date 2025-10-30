@@ -4,7 +4,6 @@ namespace MoreAppearancePreset
 {
     public class ModBehaviour : Duckov.Modding.ModBehaviour
     {
-        private bool _hasCopied = false; // 标记是否已经复制，用于停止检测
         private GameObject? _presetObject = null; // 保存Preset对象的引用
 
         void Awake()
@@ -14,9 +13,19 @@ namespace MoreAppearancePreset
 
         void Update()
         {
-            // 如果已经复制过，检查键盘输入和UI点击
-            if (_hasCopied)
+            // 每帧检查Preset对象是否存在（无论是否active）
+            // 如果不存在，说明场景刷新了，需要重新应用修改
+            if (!IsPresetExists())
             {
+                // Preset不存在，执行完整修改流程
+                CheckAndCopyTargetUI();
+            }
+            else
+            {
+                // Preset存在，只处理键盘输入和UI点击
+                // 确保引用是最新的
+                RefreshPresetReference();
+                
                 // 检测是否按下数字键8
                 if (Input.GetKeyDown(KeyCode.Alpha8))
                 {
@@ -28,12 +37,48 @@ namespace MoreAppearancePreset
                 {
                     PresetViewManager.CheckUIClick(_presetObject);
                 }
-                return;
             }
-            else
+        }
+
+        /// <summary>
+        /// 检查Preset对象是否存在（无论是否active）
+        /// </summary>
+        private bool IsPresetExists()
+        {
+            // 如果已经保存了引用，检查引用是否有效（对象未被销毁）
+            if (_presetObject != null && _presetObject)
             {
-                // 检测目标UI是否存在
-                CheckAndCopyTargetUI();
+                return true;
+            }
+
+            // 引用无效，尝试通过路径查找Preset对象（包括未激活的）
+            GameObject? preset = UIFinder.FindGameObjectByPath($"{PresetData.PANELS_PATH}/Preset");
+            if (preset != null)
+            {
+                // 更新引用
+                _presetObject = preset;
+                return true;
+            }
+
+            // 未找到Preset对象，清除无效引用
+            _presetObject = null;
+            return false;
+        }
+
+        /// <summary>
+        /// 刷新Preset对象的引用
+        /// </summary>
+        private void RefreshPresetReference()
+        {
+            // 如果引用无效或为空，尝试重新查找
+            if (_presetObject == null)
+            {
+                GameObject? preset = UIFinder.FindGameObjectByPath($"{PresetData.PANELS_PATH}/Preset");
+                if (preset != null)
+                {
+                    _presetObject = preset;
+                    Debug.Log("[ModBehaviour] ✓ 已刷新Preset对象引用");
+                }
             }
         }
 
@@ -89,16 +134,13 @@ namespace MoreAppearancePreset
                     // 复制YellowDuck到Preset的子级
                     Debug.Log($"[ModBehaviour] ===== 开始复制YellowDuck到Preset =====");
                     YellowDuckHandler.CopyYellowDuckToPreset(_presetObject, PresetData.PresetDataDict);
+                    
+                    Debug.Log("[ModBehaviour] ✓ UI复制流程完成");
                 }
                 else
                 {
                     Debug.LogError("[ModBehaviour] ✗ Panel复制失败，无法继续后续操作");
                 }
-                
-                // 标记已复制，停止后续检测
-                _hasCopied = true;
-                
-                Debug.Log("[ModBehaviour] ✓ UI复制流程完成，停止检测");
             }
         }
     }
