@@ -352,6 +352,7 @@ namespace MoreAppearancePreset
 
         /// <summary>
         /// 修改原始YellowDuck按钮的逻辑，使其等同于按键8的效果（切换Preset视图）
+        /// 删除原有的Button组件并重新创建，确保完全清除所有原有的监听器
         /// </summary>
         public static void UpdateOriginalYellowDuckButton(GameObject? presetObject)
         {
@@ -370,28 +371,83 @@ namespace MoreAppearancePreset
 
                 Debug.Log($"[YellowDuckHandler] ✓ 找到原始YellowDuck对象: {yellowDuckSource.name}");
 
-                // 获取Button组件
-                Button? button = yellowDuckSource.GetComponent<Button>();
-                
-                if (button != null)
+                // 保存Button组件的属性（如果存在）
+                bool interactable = true;
+                ColorBlock colors = ColorBlock.defaultColorBlock;
+                SpriteState spriteState = new SpriteState();
+                AnimationTriggers animationTriggers = new AnimationTriggers();
+                Graphic? targetGraphic = null;
+                Selectable.Transition transition = Selectable.Transition.ColorTint;
+                Navigation navigation = Navigation.defaultNavigation;
+
+                // 查找并删除所有Button组件（可能存在多个）
+                Button[] existingButtons = yellowDuckSource.GetComponents<Button>();
+                if (existingButtons != null && existingButtons.Length > 0)
                 {
-                    // 清除所有现有的监听器
-                    button.onClick.RemoveAllListeners();
-                    Debug.Log($"[YellowDuckHandler] ✓ 已清除原有监听器");
+                    Debug.Log($"[YellowDuckHandler] ✓ 找到 {existingButtons.Length} 个现有Button组件，开始删除...");
+                    
+                    // 保存第一个Button的属性（如果需要在重新创建时恢复）
+                    Button firstButton = existingButtons[0];
+                    interactable = firstButton.interactable;
+                    colors = firstButton.colors;
+                    spriteState = firstButton.spriteState;
+                    animationTriggers = firstButton.animationTriggers;
+                    targetGraphic = firstButton.targetGraphic;
+                    transition = firstButton.transition;
+                    navigation = firstButton.navigation;
 
-                    // 添加新的监听器，等同于按键8的效果
-                    button.onClick.AddListener(() =>
+                    // 删除所有Button组件（使用DestroyImmediate立即销毁，确保完全清除所有监听器）
+                    foreach (Button btn in existingButtons)
                     {
-                        Debug.Log($"[YellowDuckHandler] 原始YellowDuck按钮被点击，触发TogglePresetView");
-                        PresetViewManager.TogglePresetView(presetObject);
-                    });
-
-                    Debug.Log($"[YellowDuckHandler] ✓ 已修改原始YellowDuck按钮逻辑（等同于按键8）");
+                        if (btn != null)
+                        {
+                            UnityEngine.Object.DestroyImmediate(btn);
+                            Debug.Log($"[YellowDuckHandler] ✓ 已立即删除Button组件（包括所有监听器）");
+                        }
+                    }
                 }
                 else
                 {
-                    Debug.LogWarning($"[YellowDuckHandler] ✗ 原始YellowDuck对象上未找到Button组件");
+                    Debug.Log($"[YellowDuckHandler] 未找到现有Button组件，将创建新的Button组件");
                 }
+
+                // 再次检查确保所有Button组件都已删除
+                Button[] remainingButtons = yellowDuckSource.GetComponents<Button>();
+                if (remainingButtons != null && remainingButtons.Length > 0)
+                {
+                    Debug.LogWarning($"[YellowDuckHandler] 警告: 仍有 {remainingButtons.Length} 个Button组件残留，强制删除...");
+                    foreach (Button btn in remainingButtons)
+                    {
+                        if (btn != null)
+                        {
+                            UnityEngine.Object.DestroyImmediate(btn);
+                        }
+                    }
+                }
+
+                // 重新创建Button组件
+                Debug.Log($"[YellowDuckHandler] 开始创建新的Button组件...");
+                Button newButton = yellowDuckSource.AddComponent<Button>();
+                Debug.Log($"[YellowDuckHandler] ✓ 已创建新Button组件");
+
+                // 恢复属性
+                newButton.interactable = interactable;
+                newButton.colors = colors;
+                newButton.spriteState = spriteState;
+                newButton.animationTriggers = animationTriggers;
+                newButton.targetGraphic = targetGraphic;
+                newButton.transition = transition;
+                newButton.navigation = navigation;
+
+                // 添加新的监听器，等同于按键8的效果
+                Debug.Log($"[YellowDuckHandler] 添加新的监听器（等同于按键8）...");
+                newButton.onClick.AddListener(() =>
+                {
+                    Debug.Log($"[YellowDuckHandler] 原始YellowDuck按钮被点击，触发TogglePresetView");
+                    PresetViewManager.TogglePresetView(presetObject);
+                });
+
+                Debug.Log($"[YellowDuckHandler] ✓ 已修改原始YellowDuck按钮逻辑（等同于按键8）");
             }
             catch (Exception ex)
             {
