@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace MoreAppearancePreset
 {
@@ -13,8 +14,9 @@ namespace MoreAppearancePreset
 
         void Update()
         {
+
             // 首先检查是否是捏脸场景，如果不是则直接返回，节省性能
-            if (!IsCustomFaceSceneActive())
+            if (SceneManager.GetActiveScene().name!="Prologue_1")
             {
                 return;
             }
@@ -30,7 +32,7 @@ namespace MoreAppearancePreset
             {
                 // Preset存在，只处理UI点击
                 // 确保引用是最新的
-                RefreshPresetReference();
+                // RefreshPresetReference();
 
                 // 检测鼠标左键抬起
                 if (Input.GetMouseButtonUp(0))
@@ -67,14 +69,14 @@ namespace MoreAppearancePreset
                 return true;
             }
 
-            // 引用无效，尝试通过路径查找Preset对象（包括未激活的）
-            GameObject? preset = UIFinder.FindGameObjectByPath($"{PresetData.PANELS_PATH}/Preset");
-            if (preset != null)
-            {
-                // 更新引用
-                _presetObject = preset;
-                return true;
-            }
+            // // 引用无效，尝试通过路径查找Preset对象（包括未激活的）
+            // GameObject? preset = UIFinder.FindGameObjectByPath($"{PresetData.PANELS_PATH}/Preset");
+            // if (preset != null)
+            // {
+            //     // 更新引用
+            //     _presetObject = preset;
+            //     return true;
+            // }
 
             // 未找到Preset对象，清除无效引用
             _presetObject = null;
