@@ -157,9 +157,9 @@ namespace MoreAppearancePreset
                 return false;
             }
 
-            // 查找YellowDuck和Paste对象
-            GameObject? yellowDuckObject = UIFinder.FindGameObjectByPath(PresetData.YELLOW_DUCK_PATH);
-            GameObject? pasteObject = UIFinder.FindGameObjectByPath(PresetData.PASTE_PATH);
+            // 直接使用GameObject.Find查找，避免遍历
+            GameObject? yellowDuckObject = GameObject.Find(PresetData.YELLOW_DUCK_PATH);
+            GameObject? pasteObject = GameObject.Find(PresetData.PASTE_PATH);
 
             // 检查是否为YellowDuck本身或其子对象
             if (yellowDuckObject != null)

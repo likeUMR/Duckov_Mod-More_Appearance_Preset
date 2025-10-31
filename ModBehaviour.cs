@@ -45,7 +45,7 @@ namespace MoreAppearancePreset
         /// </summary>
         private bool IsCustomFaceSceneActive()
         {
-            GameObject? panelsObject = UIFinder.FindGameObjectByPath(PresetData.PANELS_PATH);
+            GameObject? panelsObject = GameObject.Find(PresetData.PANELS_PATH);
             
             if (panelsObject == null)
             {
