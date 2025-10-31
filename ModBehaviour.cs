@@ -13,6 +13,12 @@ namespace MoreAppearancePreset
 
         void Update()
         {
+            // 首先检查是否是捏脸场景，如果不是则直接返回，节省性能
+            if (!IsCustomFaceSceneActive())
+            {
+                return;
+            }
+
             // 每帧检查Preset对象是否存在（无论是否active）
             // 如果不存在，说明场景刷新了，需要重新应用修改
             if (!IsPresetExists())
@@ -22,15 +28,9 @@ namespace MoreAppearancePreset
             }
             else
             {
-                // Preset存在，只处理键盘输入和UI点击
+                // Preset存在，只处理UI点击
                 // 确保引用是最新的
                 RefreshPresetReference();
-                
-                // 检测是否按下数字键8
-                if (Input.GetKeyDown(KeyCode.Alpha8))
-                {
-                    PresetViewManager.TogglePresetView(_presetObject);
-                }
 
                 // 检测鼠标左键抬起
                 if (Input.GetMouseButtonUp(0))
@@ -38,6 +38,22 @@ namespace MoreAppearancePreset
                     PresetViewManager.CheckUIClick(_presetObject);
                 }
             }
+        }
+
+        /// <summary>
+        /// 检查是否是捏脸场景（通过检查Panels对象是否active）
+        /// </summary>
+        private bool IsCustomFaceSceneActive()
+        {
+            GameObject? panelsObject = UIFinder.FindGameObjectByPath(PresetData.PANELS_PATH);
+            
+            if (panelsObject == null)
+            {
+                return false;
+            }
+            
+            // 检查Panels对象是否active
+            return panelsObject.activeInHierarchy;
         }
 
         /// <summary>
