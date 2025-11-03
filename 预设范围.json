@@ -1,0 +1,126 @@
+{
+  "savedSetting": false,
+  "headSetting": {
+    "mainColor": {
+      "r": [0, 1],
+      "g": [0, 1],
+      "b": [0, 1],
+      "a": 1
+    },
+    "headScaleOffset": [-0.4, 0.4],
+    "foreheadHeight": [0, 0, 6],
+    "foreheadRound": [0.35, 1]
+  },
+  "hairID": "0-16",
+  "hairInfo": {
+    "radius": 0,
+    "color": {
+      "r": [0, 1],
+      "g": [0, 1],
+      "b": [0, 1],
+      "a": 1
+    },
+    "height": 0,
+    "heightOffset": 0,
+    "scale": 1,
+    "twist": 0,
+    "distanceAngle": 0,
+    "leftRightAngle": 0
+  },
+  "eyeID": "0-14",
+  "eyeInfo": {
+    "radius": 0.23,
+    "color": {
+      "r": [0, 1],
+      "g": [0, 1],
+      "b": [0, 1],
+      "a": 1
+    },
+    "height": [-0.3, 0.3],
+    "heightOffset": 0,
+    "scale": [0.3, 4],
+    "twist": [-90, 90],
+    "distanceAngle": [0, 90],
+    "leftRightAngle": 0
+  },
+  "eyebrowID": "0-8",
+  "eyebrowInfo": {
+    "radius": 0.23,
+    "color": {
+      "r": [0, 1],
+      "g": [0, 1],
+      "b": [0, 1],
+      "a": 1
+    },
+    "height": [-0.3, 0.3],
+    "heightOffset": [-0.3, 0.3],
+    "scale": [0.3, 4],
+    "twist": [-90, 90],
+    "distanceAngle": [0, 90],
+    "leftRightAngle": 0
+  },
+  "mouthID": "0-31",
+  "mouthInfo": {
+    "radius": 0.23,
+    "color": {
+      "r": [0, 1],
+      "g": [0, 1],
+      "b": [0, 1],
+      "a": 1
+    },
+    "height": [-0.3, 0.3],
+    "heightOffset": 0,
+    "scale": [0.3, 4],
+    "twist": [-90, 90],
+    "distanceAngle": 0,
+    "leftRightAngle": [-50, 50]
+  },
+  "tailID": "0-4",
+  "tailInfo": {
+    "radius": 0,
+    "color": {
+      "r": [0, 1],
+      "g": [0, 1],
+      "b": [0, 1],
+      "a": 1
+    },
+    "height": 0,
+    "heightOffset": 0,
+    "scale": [0.3, 2],
+    "twist": 0,
+    "distanceAngle": 0,
+    "leftRightAngle": 0
+  },
+  "footID": "0-3",
+  "footInfo": {
+    "radius": 0,
+    "color": {
+      "r": [0, 1],
+      "g": [0, 1],
+      "b": [0, 1],
+      "a": 1
+    },
+    "height": 0,
+    "heightOffset": 0,
+    "scale": [0.5, 1.5],
+    "twist": 0,
+    "distanceAngle": 0,
+    "leftRightAngle": 0
+  },
+  "wingID": "0-3",
+  "wingInfo": {
+    "radius": 0,
+    "color": {
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "a": 1
+    },
+    "height": 0,
+    "heightOffset": 0,
+    "scale": [0.5, 2],
+    "twist": 0,
+    "distanceAngle": 0,
+    "leftRightAngle": 0
+  }
+}

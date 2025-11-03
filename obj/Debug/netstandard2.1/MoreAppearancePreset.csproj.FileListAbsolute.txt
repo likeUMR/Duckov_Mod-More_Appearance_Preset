@@ -1,0 +1,311 @@
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\MoreAppearancePreset.deps.json
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\MoreAppearancePreset.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\MoreAppearancePreset.pdb
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\ItemStatsSystem.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\TeamSoda.Duckov.Core.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\TeamSoda.Duckov.Utilities.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\TeamSoda.MiniLocalizor.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.2D.Tilemap.Extras.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.Addressables.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.Burst.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.Burst.Unsafe.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.Collections.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.Collections.LowLevel.ILSupport.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.InputSystem.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.InputSystem.ForUI.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.Mathematics.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.MemoryProfiler.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.Polybrush.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.ProBuilder.Csg.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.ProBuilder.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.ProBuilder.KdTree.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.ProBuilder.Poly2Tri.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.ProBuilder.Stl.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.Profiling.Core.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.Recorder.Base.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.Recorder.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.RenderPipeline.Universal.ShaderLibrary.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.RenderPipelines.Core.Runtime.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.RenderPipelines.Core.ShaderLibrary.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.RenderPipelines.Universal.Config.Runtime.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.RenderPipelines.Universal.Runtime.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.RenderPipelines.Universal.Shaders.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.ResourceManager.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.ScriptableBuildPipeline.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.Splines.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.TextMeshPro.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.Timeline.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.VisualScripting.Antlr3.Runtime.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.VisualScripting.Core.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.VisualScripting.Flow.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Unity.VisualScripting.State.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.AccessibilityModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.AIModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.AndroidJNIModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.AnimationModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.ARModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.AssetBundleModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.AudioModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.ClothModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.ClusterInputModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.ClusterRendererModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.ContentLoadModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.CoreModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.CrashReportingModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.DirectorModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.DSPGraphModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.GameCenterModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.GIModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.GridModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.HotReloadModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.ImageConversionModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.IMGUIModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.InputLegacyModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.InputModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.JSONSerializeModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.LocalizationModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.NVIDIAModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.ParticleSystemModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.PerformanceReportingModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.Physics2DModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.PhysicsModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.ProfilerModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.PropertiesModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.ScreenCaptureModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.SharedInternalsModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.SpriteMaskModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.SpriteShapeModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.StreamingModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.SubstanceModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.SubsystemsModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.TerrainModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.TerrainPhysicsModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.TextCoreFontEngineModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.TextCoreTextEngineModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.TextRenderingModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.TilemapModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.TLSModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UI.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UIElementsModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UIModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UmbraModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UnityAnalyticsCommonModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UnityAnalyticsModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UnityConnectModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UnityCurlModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UnityTestProtocolModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UnityWebRequestAssetBundleModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UnityWebRequestAudioModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UnityWebRequestModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UnityWebRequestTextureModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.UnityWebRequestWWWModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.VehiclesModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.VFXModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.VideoModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.VirtualTexturingModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.VRModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.WindModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UnityEngine.XRModule.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\SodaLocalization.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Plugins.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UniTask.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\ParadoxNotion.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\NodeCanvas.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\FMODUnity.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Cinemachine.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\AstarPathfindingProject.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\EPO.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\ECM2.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\LeTai.TrueShadow.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\ALINE.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\ShapesRuntime.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Eflatun.SceneReference.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\com.rlabrecque.steamworks.net.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\FOW.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\SymmetryBreak.TastyGrassShader.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\HBAO.Universal.Runtime.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\EasySave3.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Sirenix.OdinInspector.Attributes.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UISplineRenderer.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\UniTask.DOTween.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\DOTween.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Sirenix.Utilities.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\DOTween.Modules.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Bilibili.BDS.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\MiniExcel.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\FlexReader.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\PackageTools.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Drawing.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Clipper2Lib.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\andywiecko.BurstTriangulator.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Pathfinding.Ionic.Zip.Reduced.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\EPOUtilities.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\Newtonsoft.Json.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\bin\Debug\netstandard2.1\ICSharpCode.SharpZipLib.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppearancePreset.csproj.AssemblyReference.cache
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppearancePreset.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppearancePreset.AssemblyInfoInputs.cache
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppearancePreset.AssemblyInfo.cs
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppearancePreset.csproj.CoreCompileInputs.cache
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppe.FEC33F96.Up2Date
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppearancePreset.dll
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppearancePreset.pdb
+D:\PROJECT\VSCode\AI+Game\Duckov_Mods\MoreAppearancePreset\obj\Debug\netstandard2.1\MoreAppearancePreset.sourcelink.json
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\MoreAppearancePreset.deps.json
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\MoreAppearancePreset.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\MoreAppearancePreset.pdb
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\ItemStatsSystem.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\TeamSoda.Duckov.Core.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\TeamSoda.Duckov.Utilities.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\TeamSoda.MiniLocalizor.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.2D.Tilemap.Extras.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.Addressables.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.Burst.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.Burst.Unsafe.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.Collections.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.Collections.LowLevel.ILSupport.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.InputSystem.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.InputSystem.ForUI.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.Mathematics.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.MemoryProfiler.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.Polybrush.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.ProBuilder.Csg.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.ProBuilder.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.ProBuilder.KdTree.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.ProBuilder.Poly2Tri.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.ProBuilder.Stl.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.Profiling.Core.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.Recorder.Base.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.Recorder.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.RenderPipeline.Universal.ShaderLibrary.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.RenderPipelines.Core.Runtime.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.RenderPipelines.Core.ShaderLibrary.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.RenderPipelines.Universal.Config.Runtime.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.RenderPipelines.Universal.Runtime.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.RenderPipelines.Universal.Shaders.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.ResourceManager.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.ScriptableBuildPipeline.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.Splines.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.TextMeshPro.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.Timeline.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.VisualScripting.Antlr3.Runtime.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.VisualScripting.Core.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.VisualScripting.Flow.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Unity.VisualScripting.State.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.AccessibilityModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.AIModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.AndroidJNIModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.AnimationModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.ARModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.AssetBundleModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.AudioModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.ClothModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.ClusterInputModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.ClusterRendererModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.ContentLoadModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.CoreModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.CrashReportingModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.DirectorModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.DSPGraphModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.GameCenterModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.GIModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.GridModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.HotReloadModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.ImageConversionModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.IMGUIModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.InputLegacyModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.InputModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.JSONSerializeModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.LocalizationModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.NVIDIAModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.ParticleSystemModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.PerformanceReportingModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.Physics2DModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.PhysicsModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.ProfilerModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.PropertiesModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.ScreenCaptureModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.SharedInternalsModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.SpriteMaskModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.SpriteShapeModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.StreamingModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.SubstanceModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.SubsystemsModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.TerrainModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.TerrainPhysicsModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.TextCoreFontEngineModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.TextCoreTextEngineModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.TextRenderingModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.TilemapModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.TLSModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UI.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UIElementsModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UIModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UmbraModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UnityAnalyticsCommonModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UnityAnalyticsModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UnityConnectModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UnityCurlModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UnityTestProtocolModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UnityWebRequestAssetBundleModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UnityWebRequestAudioModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UnityWebRequestModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UnityWebRequestTextureModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.UnityWebRequestWWWModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.VehiclesModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.VFXModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.VideoModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.VirtualTexturingModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.VRModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.WindModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UnityEngine.XRModule.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\SodaLocalization.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Plugins.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UniTask.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\ParadoxNotion.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\NodeCanvas.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\FMODUnity.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Cinemachine.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\AstarPathfindingProject.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\EPO.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\ECM2.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\LeTai.TrueShadow.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\ALINE.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\ShapesRuntime.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Eflatun.SceneReference.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\com.rlabrecque.steamworks.net.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\FOW.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\SymmetryBreak.TastyGrassShader.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\HBAO.Universal.Runtime.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\EasySave3.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Sirenix.OdinInspector.Attributes.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UISplineRenderer.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\UniTask.DOTween.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\DOTween.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Sirenix.Utilities.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\DOTween.Modules.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Bilibili.BDS.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\MiniExcel.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\FlexReader.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\PackageTools.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Drawing.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Clipper2Lib.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\andywiecko.BurstTriangulator.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Pathfinding.Ionic.Zip.Reduced.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\EPOUtilities.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\Newtonsoft.Json.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\bin\Debug\netstandard2.1\ICSharpCode.SharpZipLib.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\obj\Debug\netstandard2.1\MoreAppearancePreset.csproj.AssemblyReference.cache
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\obj\Debug\netstandard2.1\MoreAppearancePreset.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\obj\Debug\netstandard2.1\MoreAppearancePreset.AssemblyInfoInputs.cache
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\obj\Debug\netstandard2.1\MoreAppearancePreset.AssemblyInfo.cs
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\obj\Debug\netstandard2.1\MoreAppearancePreset.csproj.CoreCompileInputs.cache
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\obj\Debug\netstandard2.1\MoreAppe.FEC33F96.Up2Date
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\obj\Debug\netstandard2.1\MoreAppearancePreset.dll
+C:\Users\xzy\Downloads\Duckov_Mod-More_Appearance_Preset-main (1)\Duckov_Mod-More_Appearance_Preset-main\obj\Debug\netstandard2.1\MoreAppearancePreset.pdb

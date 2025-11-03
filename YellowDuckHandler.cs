@@ -1,0 +1,618 @@
+using System;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace MoreAppearancePreset
+{
+    /// <summary>
+    /// YellowDuck处理模块
+    /// </summary>
+    public static class YellowDuckHandler
+    {
+        /// <summary>
+        /// 根据预设代码字典数量复制YellowDuck对象到Preset的子级，并重新创建Button组件
+        /// </summary>
+        public static void CopyYellowDuckToPreset(GameObject preset, Dictionary<string, string> presetDataDict)
+        {
+            if (preset == null)
+            {
+                Debug.LogWarning("[MoreAppearancePreset] CopyYellowDuckToPreset: Preset对象为空");
+                return;
+            }
+
+            try
+            {
+                Debug.Log($"[YellowDuckHandler] 开始复制YellowDuck对象到Preset...");
+
+                // ===== 新增：创建ScrollView结构 =====
+                Debug.Log("[YellowDuckHandler] ===== 创建ScrollView结构 =====");
+
+                // 1. 移除Preset面板原有的布局组件
+                ScrollViewCreator.RemovePresetLayoutComponents(preset);
+
+                // 2. 创建ScrollView并获取Content对象
+                GameObject? contentObject = ScrollViewCreator.CreateScrollView(preset);
+
+                if (contentObject == null)
+                {
+                    Debug.LogError("[YellowDuckHandler] ScrollView创建失败，无法继续");
+                    return;
+                }
+
+                Debug.Log($"[YellowDuckHandler] ✓ ScrollView创建成功，Content对象: {contentObject.name}");
+                // ===== ScrollView创建完成 =====
+
+                // 查找YellowDuck对象（包括未激活的）
+                GameObject? yellowDuckSource = UIFinder.FindGameObjectByPath(PresetData.YELLOW_DUCK_PATH);
+
+                if (yellowDuckSource == null)
+                {
+                    Debug.LogWarning($"[YellowDuckHandler] ✗ 未找到YellowDuck对象: {PresetData.YELLOW_DUCK_PATH}");
+                    return;
+                }
+
+                Debug.Log($"[YellowDuckHandler] ✓ 找到YellowDuck源对象: {yellowDuckSource.name}");
+                Debug.Log($"[YellowDuckHandler]   路径: {UIFinder.GetFullPath(yellowDuckSource.transform)}");
+                Debug.Log($"[YellowDuckHandler]   激活状态: {yellowDuckSource.activeSelf}");
+
+                // 首先在最前面创建随机preset按钮
+                Debug.Log($"[YellowDuckHandler] ===== 创建随机preset按钮 =====");
+                GameObject randomPresetButton = UnityEngine.Object.Instantiate(yellowDuckSource);
+                randomPresetButton.name = yellowDuckSource.name;
+
+                // ===== 修改：设置父级为Content而不是preset =====
+                randomPresetButton.transform.SetParent(contentObject.transform, false);
+                // ===== 修改完成 =====
+
+                randomPresetButton.transform.localPosition = yellowDuckSource.transform.localPosition;
+                randomPresetButton.transform.localRotation = yellowDuckSource.transform.localRotation;
+                randomPresetButton.transform.localScale = yellowDuckSource.transform.localScale;
+
+                // 设置随机preset按钮的点击逻辑
+                ButtonHandler.RecreateButtonComponentForRandomPreset(randomPresetButton);
+
+                // 设置随机preset按钮的文字
+                UpdateYellowDuckText(randomPresetButton, "???");
+
+                // 添加彩虹色循环效果组件
+                Debug.Log($"[YellowDuckHandler] 添加彩虹色循环效果组件...");
+                if (randomPresetButton.GetComponent<RainbowColorEffect>() == null)
+                {
+                    randomPresetButton.AddComponent<RainbowColorEffect>();
+                    Debug.Log($"[YellowDuckHandler] ✓ 已添加彩虹色循环效果组件");
+                }
+
+                // 确保随机按钮在最前面
+                randomPresetButton.transform.SetSiblingIndex(0);
+
+                Debug.Log($"[YellowDuckHandler] ✓ 随机preset按钮创建完成");
+
+                // 根据预设代码字典的数量复制YellowDuck对象
+                int presetCount = presetDataDict.Count;
+                Debug.Log($"[YellowDuckHandler] 预设数量: {presetCount}，开始复制...");
+
+                int index = 0;
+                foreach (var presetEntry in presetDataDict)
+                {
+                    string presetName = presetEntry.Key;
+                    string presetData = presetEntry.Value;
+
+                    Debug.Log($"[YellowDuckHandler] ===== 复制预设 [{index + 1}/{presetCount}]: {presetName} =====");
+
+                    // 复制YellowDuck对象
+                    GameObject yellowDuckCopy = UnityEngine.Object.Instantiate(yellowDuckSource);
+                    yellowDuckCopy.name = yellowDuckSource.name;
+                    Debug.Log($"[YellowDuckHandler] ✓ 已创建YellowDuck副本: {yellowDuckCopy.name}");
+
+                    // ===== 修改：设置为Content的子对象而不是Preset =====
+                    yellowDuckCopy.transform.SetParent(contentObject.transform, false);
+                    Transform? actualParent = yellowDuckCopy.transform.parent;
+                    string parentName = actualParent != null ? actualParent.name : "(无父对象)";
+                    Debug.Log($"[YellowDuckHandler] ✓ 已设置为Content的子对象（验证: 父对象={parentName}）");
+                    // ===== 修改完成 =====
+
+                    // 保持位置、旋转和缩放
+                    yellowDuckCopy.transform.localPosition = yellowDuckSource.transform.localPosition;
+                    yellowDuckCopy.transform.localRotation = yellowDuckSource.transform.localRotation;
+                    yellowDuckCopy.transform.localScale = yellowDuckSource.transform.localScale;
+
+                    // 验证Transform属性
+                    Vector3 actualPosition = yellowDuckCopy.transform.localPosition;
+                    Vector3 actualScale = yellowDuckCopy.transform.localScale;
+                    Debug.Log($"[YellowDuckHandler] ✓ 已设置Transform属性（验证: 位置={actualPosition}, 缩放={actualScale}）");
+
+                    // 删除并重新创建Button组件，并添加点击监听器
+                    Debug.Log($"[YellowDuckHandler] 开始处理Button组件...");
+                    ButtonHandler.RecreateButtonComponent(yellowDuckCopy, presetData);
+
+                    // 更新Text子对象的文字
+                    Debug.Log($"[YellowDuckHandler] 开始修改文字为: 我是{presetName}...");
+                    UpdateYellowDuckText(yellowDuckCopy, presetName);
+
+                    // 设置Image组件的颜色为预设的mainColor（排除"小黄鸭"）
+                    if (presetName != "小黄鸭")
+                    {
+                        Debug.Log($"[YellowDuckHandler] 开始设置Image颜色为预设mainColor...");
+                        SetImageColorFromPreset(yellowDuckCopy, presetData);
+                    }
+
+                    index++;
+                    Debug.Log($"[YellowDuckHandler] ✓ 完成复制预设 [{index}/{presetCount}]: {presetName}");
+                }
+
+                Debug.Log($"[YellowDuckHandler] ✓ 所有YellowDuck复制操作完成，共复制 {presetCount} 个");
+                Debug.Log($"[YellowDuckHandler] ✓ 所有按钮已添加到ScrollView的Content中");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[MoreAppearancePreset] 复制YellowDuck时发生错误: {ex.Message}");
+                Debug.LogError($"[MoreAppearancePreset] 堆栈跟踪: {ex.StackTrace}");
+            }
+        }
+
+        /// <summary>
+        /// 从预设数据中解析mainColor并设置Image组件的颜色
+        /// 使用mainColor的RGB值
+        /// 亮度：使用RGB平均值计算亮度，如果mainColor比参考色亮，则使用平均值；否则保持mainColor的亮度
+        /// 通过按比例缩放RGB值来调整亮度
+        /// </summary>
+        private static void SetImageColorFromPreset(GameObject buttonObject, string presetDataJson)
+        {
+            if (buttonObject == null || string.IsNullOrEmpty(presetDataJson))
+            {
+                return;
+            }
+
+            try
+            {
+                // 从JSON中解析mainColor
+                Color? mainColor = ParseMainColorFromPreset(presetDataJson);
+
+                if (mainColor.HasValue)
+                {
+                    // 参考颜色的RGB值: (0.91, 0.57, 0.08)
+                    Color referenceColor = new Color(0.91f, 0.57f, 0.08f, 1f);
+
+                    // 使用RGB平均值计算亮度
+                    float mainBrightness = (mainColor.Value.r + mainColor.Value.g + mainColor.Value.b) / 3f;
+                    float referenceBrightness = (referenceColor.r + referenceColor.g + referenceColor.b) / 3f;
+
+                    // 计算最终亮度值（RGB平均值）
+                    float finalBrightness;
+                    if (mainBrightness > referenceBrightness)
+                    {
+                        // 如果mainColor更亮，使用加权平均（mainColor权重2，参考色权重1）
+                        finalBrightness = (mainBrightness * 2f + referenceBrightness * 1f) / 3f;
+                    }
+                    else
+                    {
+                        // 如果mainColor更暗或相等，保持mainColor的亮度
+                        finalBrightness = mainBrightness;
+                    }
+
+                    // 计算缩放因子（如果需要调整）
+                    Color finalColor;
+                    if (Mathf.Abs(mainBrightness - finalBrightness) > 0.001f)
+                    {
+                        // 需要调整：按比例缩放RGB值
+                        float scaleFactor = finalBrightness / mainBrightness;
+                        finalColor = new Color(
+                            mainColor.Value.r * scaleFactor,
+                            mainColor.Value.g * scaleFactor,
+                            mainColor.Value.b * scaleFactor,
+                            mainColor.Value.a
+                        );
+                    }
+                    else
+                    {
+                        // 不需要调整，直接使用mainColor
+                        finalColor = mainColor.Value;
+                    }
+
+                    // 获取Image组件
+                    Image? image = buttonObject.GetComponent<Image>();
+
+                    if (image != null)
+                    {
+                        image.color = finalColor;
+                        Debug.Log($"[YellowDuckHandler] ✓ 已设置Image颜色");
+                        Debug.Log($"[YellowDuckHandler]   亮度(RGB平均值): main={mainBrightness:F3}, ref={referenceBrightness:F3}, final={finalBrightness:F3}");
+                        Debug.Log($"[YellowDuckHandler]   RGB: R={finalColor.r:F3}, G={finalColor.g:F3}, B={finalColor.b:F3}, A={finalColor.a:F3}");
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[YellowDuckHandler] ✗ 按钮对象上未找到Image组件");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("[YellowDuckHandler] ✗ 无法从预设数据中解析mainColor");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[MoreAppearancePreset] 设置Image颜色时发生错误: {ex.Message}");
+                Debug.LogError($"[MoreAppearancePreset] 堆栈跟踪: {ex.StackTrace}");
+            }
+        }
+
+        /// <summary>
+        /// 从预设JSON字符串中解析mainColor
+        /// </summary>
+        private static Color? ParseMainColorFromPreset(string presetDataJson)
+        {
+            try
+            {
+                // 使用正则表达式提取mainColor的r, g, b, a值
+                // 查找模式: "mainColor":{"r":value,"g":value,"b":value,"a":value}
+                // 支持字段顺序不同，但通常顺序是r, g, b, a
+                string pattern = @"""mainColor"":\s*\{[^}]*""r"":\s*([0-9.]+)[^}]*""g"":\s*([0-9.]+)[^}]*""b"":\s*([0-9.]+)[^}]*""a"":\s*([0-9.]+)";
+                var match = System.Text.RegularExpressions.Regex.Match(presetDataJson, pattern);
+
+                if (match.Success && match.Groups.Count >= 5)
+                {
+                    if (float.TryParse(match.Groups[1].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float r) &&
+                        float.TryParse(match.Groups[2].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float g) &&
+                        float.TryParse(match.Groups[3].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float b) &&
+                        float.TryParse(match.Groups[4].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float a))
+                    {
+                        return new Color(r, g, b, a);
+                    }
+                }
+
+                // 如果上面的正则表达式失败，尝试更宽松的匹配（分别查找每个字段）
+                string rPattern = @"""mainColor"":\s*\{[^}]*""r"":\s*([0-9.]+)";
+                string gPattern = @"""mainColor"":\s*\{[^}]*""g"":\s*([0-9.]+)";
+                string bPattern = @"""mainColor"":\s*\{[^}]*""b"":\s*([0-9.]+)";
+                string aPattern = @"""mainColor"":\s*\{[^}]*""a"":\s*([0-9.]+)";
+
+                var rMatch = System.Text.RegularExpressions.Regex.Match(presetDataJson, rPattern);
+                var gMatch = System.Text.RegularExpressions.Regex.Match(presetDataJson, gPattern);
+                var bMatch = System.Text.RegularExpressions.Regex.Match(presetDataJson, bPattern);
+                var aMatch = System.Text.RegularExpressions.Regex.Match(presetDataJson, aPattern);
+
+                if (rMatch.Success && gMatch.Success && bMatch.Success && aMatch.Success)
+                {
+                    if (float.TryParse(rMatch.Groups[1].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float r2) &&
+                        float.TryParse(gMatch.Groups[1].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float g2) &&
+                        float.TryParse(bMatch.Groups[1].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float b2) &&
+                        float.TryParse(aMatch.Groups[1].Value, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float a2))
+                    {
+                        return new Color(r2, g2, b2, a2);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[MoreAppearancePreset] 解析mainColor时发生错误: {ex.Message}");
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// 修改原始YellowDuck对象的文字为"我是什么？"
+        /// </summary>
+        public static void UpdateOriginalYellowDuckText()
+        {
+            try
+            {
+                Debug.Log($"[YellowDuckHandler] 开始修改原始YellowDuck对象的文字...");
+
+                // 查找原始YellowDuck对象（包括未激活的）
+                GameObject? yellowDuckSource = UIFinder.FindGameObjectByPath(PresetData.YELLOW_DUCK_PATH);
+
+                if (yellowDuckSource == null)
+                {
+                    Debug.LogWarning($"[YellowDuckHandler] ✗ 未找到原始YellowDuck对象: {PresetData.YELLOW_DUCK_PATH}");
+                    return;
+                }
+
+                Debug.Log($"[YellowDuckHandler] ✓ 找到原始YellowDuck对象: {yellowDuckSource.name}");
+                Debug.Log($"[YellowDuckHandler]   路径: {UIFinder.GetFullPath(yellowDuckSource.transform)}");
+
+                // 查找名为"Text (TMP)"的子对象
+                Transform? textTransform = null;
+                Transform yellowDuckTransform = yellowDuckSource.transform;
+
+                Debug.Log($"[YellowDuckHandler] YellowDuck对象 {yellowDuckSource.name} 的子对象数量: {yellowDuckTransform.childCount}");
+
+                for (int i = 0; i < yellowDuckTransform.childCount; i++)
+                {
+                    Transform child = yellowDuckTransform.GetChild(i);
+                    Debug.Log($"[YellowDuckHandler] 检查子对象 [{i}]: {child.name}");
+                    if (child.name == "Text (TMP)")
+                    {
+                        textTransform = child;
+                        Debug.Log($"[YellowDuckHandler] ✓ 找到Text (TMP)子对象: {child.name}");
+                        break;
+                    }
+                }
+
+                if (textTransform == null)
+                {
+                    Debug.LogWarning("[YellowDuckHandler] ✗ 未找到Text (TMP)子对象");
+                    return;
+                }
+
+                Debug.Log($"[YellowDuckHandler] 开始移除TextLocalizor组件...");
+
+                // 在修改文字前，先移除TextLocalizor组件
+                TextLocalizerRemover.RemoveTextLocalizers(textTransform.gameObject);
+
+                Debug.Log($"[YellowDuckHandler] 开始获取TextMeshProUGUI组件...");
+
+                // 从Text对象获取TextMeshProUGUI组件
+                TextMeshProUGUI? tmp = textTransform.GetComponent<TextMeshProUGUI>();
+
+                if (tmp != null)
+                {
+                    string oldText = tmp.text ?? "(空)";
+                    // 使用富文本语法："什"字为蓝色，"么"字为红色
+                    string newText = "我是<color=#0000FF>什</color><color=#FF0000>么</color>？";
+                    tmp.text = newText;
+                    string actualText = tmp.text ?? "(空)";
+
+                    Debug.Log($"[YellowDuckHandler] ✓ 成功修改原始YellowDuck对象的文字");
+                    Debug.Log($"[YellowDuckHandler]   旧文字: \"{oldText}\"");
+                    Debug.Log($"[YellowDuckHandler]   新文字（验证）: \"{actualText}\"");
+                    Debug.Log($"[YellowDuckHandler]   TMP组件位置: {UIFinder.GetFullPath(tmp.transform)}");
+                }
+                else
+                {
+                    Debug.LogWarning("[YellowDuckHandler] ✗ Text子对象上未找到TextMeshProUGUI组件");
+                }
+
+                Debug.Log($"[YellowDuckHandler] ✓ 原始YellowDuck文字修改完成");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[MoreAppearancePreset] 修改原始YellowDuck文字时发生错误: {ex.Message}");
+                Debug.LogError($"[MoreAppearancePreset] 堆栈跟踪: {ex.StackTrace}");
+            }
+        }
+
+        /// <summary>
+        /// 修改原始YellowDuck按钮的逻辑，使其等同于按键8的效果（切换Preset视图）
+        /// 删除原有的Button组件并重新创建，确保完全清除所有原有的监听器
+        /// </summary>
+        public static void UpdateOriginalYellowDuckButton(GameObject? presetObject)
+        {
+            try
+            {
+                Debug.Log($"[YellowDuckHandler] 开始修改原始YellowDuck按钮的逻辑...");
+
+                // 查找原始YellowDuck对象（包括未激活的）
+                GameObject? yellowDuckSource = UIFinder.FindGameObjectByPath(PresetData.YELLOW_DUCK_PATH);
+
+                if (yellowDuckSource == null)
+                {
+                    Debug.LogWarning($"[YellowDuckHandler] ✗ 未找到原始YellowDuck对象: {PresetData.YELLOW_DUCK_PATH}");
+                    return;
+                }
+
+                Debug.Log($"[YellowDuckHandler] ✓ 找到原始YellowDuck对象: {yellowDuckSource.name}");
+
+                // 保存Button组件的属性（如果存在）
+                bool interactable = true;
+                ColorBlock colors = ColorBlock.defaultColorBlock;
+                SpriteState spriteState = new SpriteState();
+                AnimationTriggers animationTriggers = new AnimationTriggers();
+                Graphic? targetGraphic = null;
+                Selectable.Transition transition = Selectable.Transition.ColorTint;
+                Navigation navigation = Navigation.defaultNavigation;
+
+                // 查找并删除所有Button组件（可能存在多个）
+                Button[] existingButtons = yellowDuckSource.GetComponents<Button>();
+                if (existingButtons != null && existingButtons.Length > 0)
+                {
+                    Debug.Log($"[YellowDuckHandler] ✓ 找到 {existingButtons.Length} 个现有Button组件，开始删除...");
+
+                    // 保存第一个Button的属性（如果需要在重新创建时恢复）
+                    Button firstButton = existingButtons[0];
+                    interactable = firstButton.interactable;
+                    colors = firstButton.colors;
+                    spriteState = firstButton.spriteState;
+                    animationTriggers = firstButton.animationTriggers;
+                    targetGraphic = firstButton.targetGraphic;
+                    transition = firstButton.transition;
+                    navigation = firstButton.navigation;
+
+                    // 删除所有Button组件（使用DestroyImmediate立即销毁，确保完全清除所有监听器）
+                    foreach (Button btn in existingButtons)
+                    {
+                        if (btn != null)
+                        {
+                            UnityEngine.Object.DestroyImmediate(btn);
+                            Debug.Log($"[YellowDuckHandler] ✓ 已立即删除Button组件（包括所有监听器）");
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.Log($"[YellowDuckHandler] 未找到现有Button组件，将创建新的Button组件");
+                }
+
+                // 再次检查确保所有Button组件都已删除
+                Button[] remainingButtons = yellowDuckSource.GetComponents<Button>();
+                if (remainingButtons != null && remainingButtons.Length > 0)
+                {
+                    Debug.LogWarning($"[YellowDuckHandler] 警告: 仍有 {remainingButtons.Length} 个Button组件残留，强制删除...");
+                    foreach (Button btn in remainingButtons)
+                    {
+                        if (btn != null)
+                        {
+                            UnityEngine.Object.DestroyImmediate(btn);
+                        }
+                    }
+                }
+
+                // 重新创建Button组件
+                Debug.Log($"[YellowDuckHandler] 开始创建新的Button组件...");
+                Button newButton = yellowDuckSource.AddComponent<Button>();
+                Debug.Log($"[YellowDuckHandler] ✓ 已创建新Button组件");
+
+                // 恢复属性
+                newButton.interactable = interactable;
+                newButton.colors = colors;
+                newButton.spriteState = spriteState;
+                newButton.animationTriggers = animationTriggers;
+                newButton.targetGraphic = targetGraphic;
+                newButton.transition = transition;
+                newButton.navigation = navigation;
+
+                // 添加新的监听器，等同于按键8的效果
+                Debug.Log($"[YellowDuckHandler] 添加新的监听器（等同于按键8）...");
+                newButton.onClick.AddListener(() =>
+                {
+                    Debug.Log($"[YellowDuckHandler] 原始YellowDuck按钮被点击，触发TogglePresetView");
+                    PresetViewManager.TogglePresetView(presetObject);
+                });
+
+                Debug.Log($"[YellowDuckHandler] ✓ 已修改原始YellowDuck按钮逻辑（等同于按键8）");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[MoreAppearancePreset] 修改原始YellowDuck按钮逻辑时发生错误: {ex.Message}");
+                Debug.LogError($"[MoreAppearancePreset] 堆栈跟踪: {ex.StackTrace}");
+            }
+        }
+
+        /// <summary>
+        /// 修改Paste对象的TMP组件文字为"我是什么"
+        /// </summary>
+        public static void UpdatePasteText()
+        {
+            try
+            {
+                Debug.Log($"[YellowDuckHandler] 开始修改Paste对象的文字...");
+
+                // 查找Paste对象（包括未激活的）
+                GameObject? pasteObject = UIFinder.FindGameObjectByPath(PresetData.PASTE_PATH);
+
+                if (pasteObject == null)
+                {
+                    Debug.LogWarning($"[YellowDuckHandler] ✗ 未找到Paste对象: {PresetData.PASTE_PATH}");
+                    return;
+                }
+
+                Debug.Log($"[YellowDuckHandler] ✓ 找到Paste对象: {pasteObject.name}");
+                Debug.Log($"[YellowDuckHandler]   路径: {UIFinder.GetFullPath(pasteObject.transform)}");
+
+                Debug.Log($"[YellowDuckHandler] 开始移除TextLocalizer组件...");
+
+                // 在修改文字前，先移除TextLocalizer组件
+                TextLocalizerRemover.RemoveTextLocalizers(pasteObject);
+
+                // 首先尝试从对象本身获取TMP组件
+                TextMeshProUGUI? tmp = pasteObject.GetComponent<TextMeshProUGUI>();
+
+                // 如果对象本身没有，则从子对象中查找（包括未激活的）
+                if (tmp == null)
+                {
+                    Debug.Log($"[YellowDuckHandler] Paste对象本身没有TMP组件，从子对象中查找...");
+                    tmp = pasteObject.GetComponentInChildren<TextMeshProUGUI>(true);
+                }
+
+                if (tmp != null)
+                {
+                    string oldText = tmp.text ?? "(空)";
+                    string newText = "我是什么";
+                    tmp.text = newText;
+                    string actualText = tmp.text ?? "(空)";
+
+                    Debug.Log($"[YellowDuckHandler] ✓ 成功修改Paste对象的TMP文字");
+                    Debug.Log($"[YellowDuckHandler]   旧文字: \"{oldText}\"");
+                    Debug.Log($"[YellowDuckHandler]   新文字（验证）: \"{actualText}\"");
+                    Debug.Log($"[YellowDuckHandler]   TMP组件位置: {UIFinder.GetFullPath(tmp.transform)}");
+                }
+                else
+                {
+                    Debug.LogWarning("[YellowDuckHandler] ✗ Paste对象及其子对象上未找到TextMeshProUGUI组件");
+                }
+
+                Debug.Log($"[YellowDuckHandler] ✓ Paste文字修改完成");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[MoreAppearancePreset] 修改Paste文字时发生错误: {ex.Message}");
+                Debug.LogError($"[MoreAppearancePreset] 堆栈跟踪: {ex.StackTrace}");
+            }
+        }
+
+        /// <summary>
+        /// 更新YellowDuck对象中名为"Text (TMP)"的子对象的TextMeshProUGUI文字
+        /// </summary>
+        private static void UpdateYellowDuckText(GameObject yellowDuck, string presetName)
+        {
+            if (yellowDuck == null)
+            {
+                Debug.LogWarning("[MoreAppearancePreset] UpdateYellowDuckText: YellowDuck对象为空");
+                return;
+            }
+
+            try
+            {
+                Debug.Log($"[YellowDuckHandler] 开始查找Text (TMP)子对象...");
+
+                // 查找名为"Text (TMP)"的子对象（Unity创建TextMeshProUGUI时的默认子对象名）
+                Transform? textTransform = null;
+                Transform yellowDuckTransform = yellowDuck.transform;
+
+                Debug.Log($"[YellowDuckHandler] YellowDuck对象 {yellowDuck.name} 的子对象数量: {yellowDuckTransform.childCount}");
+
+                for (int i = 0; i < yellowDuckTransform.childCount; i++)
+                {
+                    Transform child = yellowDuckTransform.GetChild(i);
+                    Debug.Log($"[YellowDuckHandler] 检查子对象 [{i}]: {child.name}");
+                    if (child.name == "Text (TMP)")
+                    {
+                        textTransform = child;
+                        Debug.Log($"[YellowDuckHandler] ✓ 找到Text (TMP)子对象: {child.name}");
+                        break;
+                    }
+                }
+
+                if (textTransform == null)
+                {
+                    Debug.LogWarning("[YellowDuckHandler] ✗ 未找到Text (TMP)子对象");
+                    return;
+                }
+
+                Debug.Log($"[YellowDuckHandler] 开始移除TextLocalizer组件...");
+
+                // 在修改文字前，先移除TextLocalizer组件
+                TextLocalizerRemover.RemoveTextLocalizers(textTransform.gameObject);
+
+                Debug.Log($"[YellowDuckHandler] 开始获取TextMeshProUGUI组件...");
+
+                // 从Text对象获取TextMeshProUGUI组件
+                TextMeshProUGUI? tmp = textTransform.GetComponent<TextMeshProUGUI>();
+
+                if (tmp != null)
+                {
+                    string oldText = tmp.text ?? "(空)";
+                    string newText = $"我是{presetName}";
+                    tmp.text = newText;
+                    string actualText = tmp.text ?? "(空)";
+
+                    Debug.Log($"[YellowDuckHandler] ✓ 成功修改Text子对象的文字");
+                    Debug.Log($"[YellowDuckHandler]   旧文字: \"{oldText}\"");
+                    Debug.Log($"[YellowDuckHandler]   新文字（验证）: \"{actualText}\"");
+                    Debug.Log($"[YellowDuckHandler]   TMP组件位置: {UIFinder.GetFullPath(tmp.transform)}");
+                }
+                else
+                {
+                    Debug.LogWarning("[YellowDuckHandler] ✗ Text子对象上未找到TextMeshProUGUI组件");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[MoreAppearancePreset] 更新YellowDuck文字时发生错误: {ex.Message}");
+                Debug.LogError($"[MoreAppearancePreset] 堆栈跟踪: {ex.StackTrace}");
+            }
+        }
+    }
+}
