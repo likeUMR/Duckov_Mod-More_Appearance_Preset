@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-从CSV文件中读取首批推荐的项目，生成格式化的预设数据
+从CSV文件中读取所有项目，生成格式化的预设数据
 """
 
 import os
@@ -100,26 +100,24 @@ def read_csv_and_generate(csv_path, models_dir, output_path):
     header = rows[0]
     
     # 查找列索引
-    first_recommend_col = None
     face_id_col = None
     
     for col_idx, col_name in enumerate(header):
         col_name_clean = col_name.strip()
-        if "首批推荐" in col_name_clean or "推荐" in col_name_clean:
-            first_recommend_col = col_idx
         if "捏脸ID" in col_name_clean or ("ID" in col_name_clean and "捏脸" in col_name_clean):
             face_id_col = col_idx
+            break
     
-    if first_recommend_col is None or face_id_col is None:
-        print("错误: 无法找到必要的列（需要包含'首批推荐'和'捏脸ID'列）")
+    if face_id_col is None:
+        print("错误: 无法找到必要的列（需要包含'捏脸ID'列）")
         print(f"找到的列: {header}")
         return False
     
     print(f"找到表头行: {header}")
-    print(f"首批推荐列索引: {first_recommend_col}, 捏脸ID列索引: {face_id_col}")
+    print(f"捏脸ID列索引: {face_id_col}")
     
-    # 收集首批推荐的项目
-    recommended_items = []
+    # 收集所有项目
+    items = []
     
     # 从第二行开始读取数据
     for row_idx, row in enumerate(rows[1:], start=2):
@@ -127,34 +125,23 @@ def read_csv_and_generate(csv_path, models_dir, output_path):
         if not row or all(not cell.strip() for cell in row):
             continue
         
-        # 获取首批推荐列的值
-        if first_recommend_col < len(row):
-            first_recommend_value = row[first_recommend_col].strip()
+        # 获取捏脸ID
+        if face_id_col < len(row):
+            face_id = row[face_id_col].strip()
         else:
-            first_recommend_value = ""
+            face_id = ""
         
-        # 检查是否为推荐（支持√、✓、true、是等）
-        is_recommended = False
-        if first_recommend_value in ["√", "✓", "true", "True", "TRUE", "是", "Y", "y", "1"]:
-            is_recommended = True
-        
-        if is_recommended:
-            # 获取捏脸ID
-            if face_id_col < len(row):
-                face_id = row[face_id_col].strip()
-            else:
-                face_id = ""
-            
-            if face_id:
-                recommended_items.append((row_idx, face_id))
-                print(f"第{row_idx}行: 找到推荐项目 - {face_id}")
+        # 如果捏脸ID不为空，则添加到处理列表
+        if face_id:
+            items.append((row_idx, face_id))
+            print(f"第{row_idx}行: 找到项目 - {face_id}")
     
-    print(f"\n共找到 {len(recommended_items)} 个推荐项目")
+    print(f"\n共找到 {len(items)} 个项目")
     
     # 生成输出内容
     output_lines = []
     
-    for row_idx, face_id in recommended_items:
+    for row_idx, face_id in items:
         # 查找对应的JSON文件
         json_path = find_json_file(models_dir, face_id)
         

@@ -11,11 +11,26 @@ namespace MoreAppearancePreset
     {
         // ===== 可调整的参数 =====
         private const float SCROLLVIEW_WIDTH = 350f;  // 宽度
-        private const float SCROLLVIEW_HEIGHT = 655f; // 高度
-        private const float SCROLLBAR_WIDTH = 15f;
+        private const float SCROLLVIEW_HEIGHT = 650f; // 高度
+        private const float SCROLLBAR_WIDTH = 8f;
+        
+        // Viewport Padding参数（Viewport的offsetMin和offsetMax）
+        private const float VIEWPORT_LEFT_PADDING = -15f;   // Viewport左边距
+        private const float VIEWPORT_TOP_PADDING = 5f;    // Viewport顶部边距
+        private const float VIEWPORT_BOTTOM_PADDING = 0f;  // Viewport底部边距
+        
+        // Content Padding参数（VerticalLayoutGroup的padding）
+        private const float CONTENT_LEFT_PADDING = 20f;   // Content左边距，用于显示按钮阴影
+        private const float CONTENT_TOP_PADDING = 5f;     // Content顶部边距
+        private const float CONTENT_BOTTOM_PADDING = 30f;  // Content底部边距
+        
         private const float CONTENT_WIDTH = SCROLLVIEW_WIDTH - SCROLLBAR_WIDTH;
 
-        private static readonly RectOffset LAYOUT_PADDING = new RectOffset(0, 0, 0, 0);
+        private static readonly RectOffset LAYOUT_PADDING = new RectOffset(
+            (int)CONTENT_LEFT_PADDING, 
+            0, 
+            (int)CONTENT_TOP_PADDING, 
+            (int)CONTENT_BOTTOM_PADDING); // left, right, top, bottom
         private const float LAYOUT_SPACING = 10f;
 
         // 【修改】使用Dropdown模板中的Scrollbar（蓝灰色轨道+白色滑块）
@@ -102,8 +117,8 @@ namespace MoreAppearancePreset
             rect.anchorMax = new Vector2(1, 1);
             rect.pivot = new Vector2(0, 1);
             rect.anchoredPosition = Vector2.zero;
-            rect.offsetMin = new Vector2(0, 0);
-            rect.offsetMax = new Vector2(-SCROLLBAR_WIDTH, 0);
+            rect.offsetMin = new Vector2(VIEWPORT_LEFT_PADDING, VIEWPORT_BOTTOM_PADDING);
+            rect.offsetMax = new Vector2(-SCROLLBAR_WIDTH, -VIEWPORT_TOP_PADDING);
 
             Image image = viewportObj.AddComponent<Image>();
             image.color = new Color(1f, 1f, 1f, 0.01f);
@@ -112,7 +127,7 @@ namespace MoreAppearancePreset
             Mask mask = viewportObj.AddComponent<Mask>();
             mask.showMaskGraphic = false;
 
-            Debug.Log($"[ScrollViewCreator] ✓ Viewport创建完成 (为Scrollbar预留宽度={SCROLLBAR_WIDTH})");
+            Debug.Log($"[ScrollViewCreator] ✓ Viewport创建完成 (左边距={VIEWPORT_LEFT_PADDING}, 顶部边距={VIEWPORT_TOP_PADDING}, 底部边距={VIEWPORT_BOTTOM_PADDING}, 为Scrollbar预留宽度={SCROLLBAR_WIDTH})");
             return viewportObj;
         }
 
@@ -146,7 +161,7 @@ namespace MoreAppearancePreset
             sizeFitter.horizontalFit = ContentSizeFitter.FitMode.Unconstrained;
             sizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
 
-            Debug.Log($"[ScrollViewCreator] ✓ Content创建完成 (内容区宽度={CONTENT_WIDTH})");
+            Debug.Log($"[ScrollViewCreator] ✓ Content创建完成 (内容区宽度={CONTENT_WIDTH}, 左边距={CONTENT_LEFT_PADDING}, 顶部边距={CONTENT_TOP_PADDING}, 底部边距={CONTENT_BOTTOM_PADDING})");
             return contentObj;
         }
 
@@ -385,7 +400,7 @@ namespace MoreAppearancePreset
             scrollRect.elasticity = 0.1f;
             scrollRect.inertia = true;
             scrollRect.decelerationRate = 0.135f;
-            scrollRect.scrollSensitivity = 30f;
+            scrollRect.scrollSensitivity = 1.637f; // 降低到1/10（原30f -> 3f）
 
             if (scrollbarObj != null)
             {
